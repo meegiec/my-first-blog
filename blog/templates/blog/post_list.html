@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+<html>
+    <head>
+            <title> Megan's Wicked Blog</title>
+    </head>
+    <div>
+        <h1><a href="/"> Header Header Header </a></h1>
+    </div>
+
+    {% for post in posts %}
+    <div>
+        <p>published:{{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+        {% endfor %}
+    </div>
 </html>
